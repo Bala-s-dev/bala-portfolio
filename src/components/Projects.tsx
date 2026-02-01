@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Brain, Lock, Dumbbell, Briefcase, Workflow } from 'lucide-react';
+import { ExternalLink, Github, Brain, Lock, Dumbbell, Briefcase, Workflow, Coins } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
@@ -16,8 +16,8 @@ export default function Projects() {
         'Secure RBAC with role-specific dashboards',
         'Automated grading logic with detailed feedback',
       ],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Bala-s-dev/ai-career-coach',
+      demo: 'https://smart-exam-platform.vercel.app/',
       color: 'from-cyan-500 to-blue-500',
     },
     {
@@ -34,8 +34,8 @@ export default function Projects() {
         'JWT rotation and bcrypt hashing',
         'Input sanitization and SQL injection prevention',
       ],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Bala-s-dev/balachat',
+      demo: 'https://balachat.vercel.app/',
       color: 'from-purple-500 to-pink-500',
     },
     {
@@ -52,8 +52,8 @@ export default function Projects() {
         'Serverless Convex architecture',
         'Adaptive fitness recommendations',
       ],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Bala-s-dev/AI-Fitness_VoiceCall-Assistant-and-Scheduler',
+      demo: 'https://aifitenessassistantbalasdev.vercel.app/',
       color: 'from-blue-500 to-cyan-500',
     },
     {
@@ -70,11 +70,28 @@ export default function Projects() {
         'Job Recommendation using JSearch API',
         'Secured Express backend with validation',
       ],
-      github: '#',
+      github: 'https://github.com/Bala-s-dev/ai-career-coach',
       demo: '#',
       color: 'from-pink-500 to-purple-500',
     },
-    
+    {
+    icon: Coins,
+    title: 'Precious Metal EMI Manager',
+    category: 'Fintech & Mobile',
+    problem: 'Small-scale investors and jewelers often rely on manual ledgers for tracking multi-month EMI plans, leading to data errors and delayed price synchronization.',
+    solution: 'Architected a cross-platform mobile application using React Native and Firebase that automates EMI lifecycle management and real-time metal price tracking.',
+    impact: 'Transformed manual investment tracking into a digital ecosystem, providing users with instant payment transparency and admins with a unified control center for gold/silver price volatility.',
+    tech: ['React Native', 'Expo', 'Firebase', 'Firestore', 'Cloud Messaging', 'TypeScript'],
+    highlights: [
+      'Real-time price synchronization for 22k/24k metals',
+      'Automated 11-month EMI lifecycle and payment logic',
+      'Secure Book ID-based multi-user authentication system',
+      'Admin dashboard for real-time price control and user auditing',
+    ],
+    github: 'https://github.com/Bala-s-dev/gopi-proj',
+    demo: '#', 
+    color: 'from-amber-400 to-yellow-600',
+    },
     {
     icon: Workflow,
     title: 'Node-Based Pipeline Editor',
@@ -90,7 +107,7 @@ export default function Projects() {
       'Scalable state management for complex workflows',
     ],
     github: 'https://github.com/Bala-s-dev/frontend-assessment',
-    demo: '#', // Replace with your deployment link
+    demo: 'https://frontend-assessment-rouge.vercel.app/',
     color: 'from-indigo-500 to-purple-600',
   },
 
