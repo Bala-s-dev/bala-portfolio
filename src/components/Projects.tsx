@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Brain, Lock, Dumbbell, Briefcase } from 'lucide-react';
+import { ExternalLink, Github, Brain, Lock, Dumbbell, Briefcase, Workflow } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
@@ -26,7 +26,7 @@ export default function Projects() {
       category: 'E2EE Messaging',
       problem: 'Privacy concerns in messaging apps require end-to-end encryption that works in real-time without compromising user experience.',
       solution: 'Real-time encrypted messaging platform with client-side AES-256 encryption, secure WebSocket architecture, and hardened authentication.',
-      impact: 'Provides zero-knowledge messaging where only users can decrypt their conversations, with enterprise-grade security.',
+      impact: 'Engineered a zero-knowledge messaging architecture using client-side AES-256 encryption. Successfully prevented data-at-rest vulnerabilities, ensuring 100% user privacy.',
       tech: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'AES-256', 'JWT'],
       highlights: [
         'Client-side AES-256 encryption',
@@ -62,18 +62,39 @@ export default function Projects() {
       category: 'Career Development',
       problem: 'Job seekers struggle with resume optimization and interview preparation, lacking personalized feedback on their unique strengths.',
       solution: 'AI-powered career coaching platform with resume analysis, mock interviews, and personalized career guidance.',
-      impact: 'Helps candidates improve resume quality and interview skills through AI-driven insights and practice sessions.',
+      impact: 'Developed an automated resume analyzer using the Gemini API, providing 95% accuracy in skill-gap identification compared to manual reviews and Helps the candidates to improve resume quality and interview skills through AI-driven insights and practice sessions.',
       tech: ['React', 'Express', 'MongoDB', 'Gemini API', 'OAuth'],
       highlights: [
         'Resume analysis with AI feedback',
         'Mock interview simulation',
-        'OAuth onboarding flow',
+        'Job Recommendation using JSearch API',
         'Secured Express backend with validation',
       ],
       github: '#',
       demo: '#',
       color: 'from-pink-500 to-purple-500',
     },
+    
+    {
+    icon: Workflow,
+    title: 'Node-Based Pipeline Editor',
+    category: 'AI Automation',
+    problem: 'Traditional node-based editors often suffer from redundant code for node types and lack dynamic interaction, making maintenance difficult as complexity grows.',
+    solution: 'Engineered a modular node abstraction layer in React and integrated a FastAPI backend to perform topological analysis and pipeline validation.',
+    impact: 'Streamlined node development through a reusable abstraction, implemented dynamic handle generation via regex, and provided real-time DAG validation for workflow integrity.',
+    tech: ['React', 'FastAPI', 'React Flow', 'Zustand', 'Python', 'Kahn\'s Algorithm'],
+    highlights: [
+      'Modular BaseNode abstraction for rapid scaling',
+      'Dynamic variable handle generation ({{var}} logic)',
+      'Real-time DAG validation using Kahn’s Algorithm',
+      'Scalable state management for complex workflows',
+    ],
+    github: 'https://github.com/Bala-s-dev/frontend-assessment',
+    demo: '#', // Replace with your deployment link
+    color: 'from-indigo-500 to-purple-600',
+  },
+
+
   ];
 
   return (

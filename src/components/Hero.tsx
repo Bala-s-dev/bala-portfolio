@@ -67,7 +67,7 @@ export default function Hero() {
 
           <div className="flex justify-center gap-6 mt-12">
             <a
-              href="https://github.com/balasubramanian"
+              href="https://github.com/Bala-s-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
@@ -75,7 +75,7 @@ export default function Hero() {
               <Github size={28} />
             </a>
             <a
-              href="https://linkedin.com/in/balasubramanian"
+              href="https://www.linkedin.com/in/bala-subramanian012"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
@@ -83,7 +83,7 @@ export default function Hero() {
               <Linkedin size={28} />
             </a>
             <a
-              href="mailto:bala@example.com"
+              href="mailto:baladev2004@gmail.com"
               className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
             >
               <Mail size={28} />

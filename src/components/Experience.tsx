@@ -47,9 +47,7 @@ export default function Experience() {
                   <div className="flex gap-3">
                     <span className="text-cyan-400 mt-1 flex-shrink-0">▹</span>
                     <p className="text-gray-300">
-                      <span className="font-semibold text-white">Built Unibritend platform</span> serving
-                      400+ educational institutions with multi-tenant architecture and role-based access
-                      control
+                      <span className="font-semibold text-white">Architected a Multi-tenant EdTech platform (Unibritend)</span> serving 400+ institutions across 7+ countries. Implemented RBAC and Firebase Auth, improving system security and reducing onboarding friction for thousands of users.
                     </p>
                   </div>
                   <div className="flex gap-3">
