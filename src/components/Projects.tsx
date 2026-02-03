@@ -71,7 +71,7 @@ export default function Projects() {
         'Secured Express backend with validation',
       ],
       github: 'https://github.com/Bala-s-dev/ai-career-coach',
-      demo: '#',
+      demo: 'https://ai-career-coach-topaz-sigma.vercel.app/',
       color: 'from-pink-500 to-purple-500',
     },
     {
