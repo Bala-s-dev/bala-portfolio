@@ -1,113 +1,63 @@
+import { Terminal, Shield, Database, Cloud } from 'lucide-react';
+
 export default function Skills() {
-  const skillCategories = [
+  const domains = [
     {
-      title: 'Languages',
-      skills: ['TypeScript', 'JavaScript', 'Python', 'Java', 'SQL'],
-      color: 'cyan',
+      title: "AI & LLM Engineering",
+      icon: Terminal,
+      skills: ["RAG Pipelines", "Gemini API 1.5", "Groq Inference", "Vector Embeddings", "Prompt Engineering", "Agent Orchestration"],
+      bg: "bg-cyan-950/30",
+      border: "border-cyan-500/30"
     },
     {
-      title: 'Frontend',
-      skills: ['React', 'Next.js', 'Redux', 'Tailwind CSS', 'Shadcn UI'],
-      color: 'blue',
+      title: "Cybersecurity & Identity",
+      icon: Shield,
+      skills: ["OAuth 2.0 / OIDC", "RBAC Architecture", "JWT & Session Mgmt", "End-to-End Encryption (AES)", "Input Sanitization", "Helmet.js Hardening"],
+      bg: "bg-emerald-950/30",
+      border: "border-emerald-500/30"
     },
     {
-      title: 'Backend',
-      skills: ['Node.js', 'Express', 'Prisma', 'Convex', 'Socket.io'],
-      color: 'purple',
+      title: "Full Stack Architecture",
+      icon: Database,
+      skills: ["Next.js 14 (App Router)", "TypeScript Strict Mode", "Node.js Microservices", "PostgreSQL / Prisma", "Convex (Real-time)", "React Server Components"],
+      bg: "bg-purple-950/30",
+      border: "border-purple-500/30"
     },
     {
-      title: 'Cloud & Database',
-      skills: ['PostgreSQL', 'MongoDB', 'Firebase', 'Docker', 'AWS', 'Vercel'],
-      color: 'pink',
-    },
-    {
-      title: 'AI & Integration',
-      skills: ['Gemini API', 'Groq', 'Voice AI', 'REST APIs', 'OAuth'],
-      color: 'indigo',
-    },
-    {
-      title: 'Core Strengths',
-      skills: [
-        'Real-Time Systems',
-        'Web Security',
-        'End-to-End Encryption',
-        'RBAC',
-        'Performance Optimization',
-      ],
-      color: 'emerald',
-    },
+      title: "DevOps & Infrastructure",
+      icon: Cloud,
+      skills: ["Docker Containers", "AWS (EC2/S3)", "Vercel Edge Functions", "CI/CD Pipelines", "Redis Caching", "Linux Administration"],
+      bg: "bg-blue-950/30",
+      border: "border-blue-500/30"
+    }
   ];
 
-  const colorClasses: Record<string, { border: string; text: string; hover: string }> = {
-    cyan: {
-      border: 'border-cyan-500/30',
-      text: 'text-cyan-400',
-      hover: 'hover:border-cyan-500',
-    },
-    blue: {
-      border: 'border-blue-500/30',
-      text: 'text-blue-400',
-      hover: 'hover:border-blue-500',
-    },
-    purple: {
-      border: 'border-purple-500/30',
-      text: 'text-purple-400',
-      hover: 'hover:border-purple-500',
-    },
-    pink: {
-      border: 'border-pink-500/30',
-      text: 'text-pink-400',
-      hover: 'hover:border-pink-500',
-    },
-    indigo: {
-      border: 'border-indigo-500/30',
-      text: 'text-indigo-400',
-      hover: 'hover:border-indigo-500',
-    },
-    emerald: {
-      border: 'border-emerald-500/30',
-      text: 'text-emerald-400',
-      hover: 'hover:border-emerald-500',
-    },
-  };
-
   return (
-    <section id="skills" className="py-20 bg-gray-800">
+    <section id="skills" className="py-24 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            System Capabilities
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Technical stack and engineering competencies for building production-grade systems
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Technical Arsenal</h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-emerald-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => {
-            const colors = colorClasses[category.color];
-            return (
-              <div
-                key={index}
-                className={`bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border ${colors.border} ${colors.hover} transition-all duration-300`}
-              >
-                <h3 className={`text-2xl font-bold ${colors.text} mb-6`}>
-                  {category.title}
-                </h3>
-                <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      className="text-gray-300 bg-gray-800/50 px-4 py-2 rounded-lg hover:bg-gray-700/50 transition-colors duration-200"
-                    >
-                      {skill}
-                    </div>
-                  ))}
+        <div className="grid md:grid-cols-2 gap-8">
+          {domains.map((domain, idx) => (
+            <div key={idx} className={`rounded-2xl p-8 border ${domain.border} ${domain.bg} backdrop-blur-sm transition-transform hover:-translate-y-1`}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-slate-900 rounded-lg border border-slate-700">
+                  <domain.icon className="text-white" size={24} />
                 </div>
+                <h3 className="text-2xl font-bold text-white">{domain.title}</h3>
               </div>
-            );
-          })}
+              <div className="flex flex-wrap gap-3">
+                {domain.skills.map((skill, sIdx) => (
+                  <span key={sIdx} className="px-3 py-1.5 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-sm font-mono hover:text-cyan-400 hover:border-cyan-500/50 transition-colors">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
